@@ -1,8 +1,21 @@
 .hidden {
     display: none;
 }
+.timerBtn {
+  margin-top: 160px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.button_start {
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  font-size: 20px;
+}
 .clock_style {
-    margin-top: 160px;
+    margin-top: 0px;
     margin-bottom: 0px;
     font-family: Helvetica;
     font-size: 80px;
@@ -82,12 +95,17 @@
     text-align: center;
     color: white;
     font-family: Helvetica;
+    margin-top: 25px;
 }
 .todo_style {
     list-style-type: none;
     color: white;
     font-family: Helvetica;
     text-align: center;
+}
+.todo_style li{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .button_style {
     background-color: transparent;
@@ -97,6 +115,7 @@
     border-right: none;
     border-left: none;
     border-bottom: 1px solid white;
+    margin-left: 10px;
 }
 .nav_bar {
     display: flex;
@@ -123,6 +142,19 @@
 .navbar__menu li:hover {
     border-bottom: 2px solid white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Progress bar animation css */
 
