@@ -1,0 +1,100 @@
+.hidden {
+    display: none;
+}
+.clock_style {
+    margin-top: 200px;
+    margin-bottom: 0px;
+    font-family: Helvetica;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+}
+.hello {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 50px;
+    font-family: Helvetica;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+.input_name {
+    width: 300px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid white;
+    background-color: rgba(1, 1, 1, 0.06);
+    caret-color: white;
+    outline: none;
+    font-family: Helvetica;
+    display: block;
+    margin: 0 auto;
+}
+.input_name::placeholder {
+    color: white;
+    font-family: Helvetica;
+}
+.input_button {
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    border-top: 1px solid white;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid white;
+}
+.button_sort {
+    text-align: center;
+}
+.input_todos {
+    width: 300px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid white;
+    background-color: rgba(1, 1, 1, 0.06);
+    caret-color: white;
+    outline: none;
+    font-family: Helvetica;
+    display: block;
+    margin: 0 auto;
+}
+.input_todos::placeholder {
+    color: white;
+    font-family: Helvetica;
+}
+.weather_style {
+    text-align: right;
+    font-family: Helvetica;
+    color: white;
+}
+.quote_style {
+    text-align: center;
+    vertical-align: bottom;
+    font-family: Helvetica;
+    color: white;
+}
+.quote_child{
+    text-align: center;
+    color: white;
+    font-family: Helvetica;
+}
+.todo_style {
+    list-style-type: none;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+}
+.button_style {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid white;
+}
