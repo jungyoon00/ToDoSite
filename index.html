@@ -11,16 +11,28 @@
       <ul class="navbar__menu">
         <li><a href="">Home</a></li>
         <li><a href="settings.html">MyPage</a></li>
+        <li><button id="logoutBtn" class="" style="border: none; background-color: transparent; color: white; font-family: Helvetica" onclick="logoutGreeting()">Log Out</button></li>
       </ul>
       <div id="weather" class="weather_style hidden">
         <span></span>
         <span></span>
       </div>
     </nav>
-    <div class="timerBtn">
-      <button id="timer_button" class="button_start" style="color: white; font-family: HElvetica">Start Timer</button>
+    <div class="timer_button_form">
+      <button id="timer_get" class="timer_button" value="unactive" style="margin-right: 5px">Start Timer</button>
+      <button id="timer_clear" class="timer_button" style="margin-left: 5px; margin-right: 5px" onclick="clearTimer()">Clear</button>
+      <button id="timer_reset" class="timer_button" style="margin-left: 5px">Reset</button>
+    </div>
+    <div class="timer_row">
+      <span id="row_start" class="hidden">START</span>
+      <span id="row_end" class="hidden">ENDED</span>
+    </div>
+    <div class="show_timer">
+      <span id="start_time" class="show_time" style="padding-right: 3px"></span>
+      <span id="end_time" class="show_time" style="padding-left: 3px"></span>
     </div>
     <h2 id="clock" class="clock_style">00:00:00</h2>
+    <h2 id="stopwatch" class="stopwatch_style">00:00:00</h2>
     <form class="hidden" id="login-form">
       <input
         class="input_name"
@@ -49,5 +61,31 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/timer.js"></script>
+    <script>
+      function clearTimer() {
+        const timer = document.querySelector("#timer_get")
+        const start_time = document.querySelector("#start_time");
+        const end_time = document.querySelector("#end_time");
+        const stopwatch_disable = document.querySelector("#stopwatch");
+
+        const row_start = document.querySelector("#row_start");
+        const row_end = document.querySelector("#row_end");
+
+        if (timer.value === "active") {
+          alert("Can't clear an active timer. Please stop timer to clear that.");
+          return
+        }
+        stopwatch_disable.classList.add("hidden");
+        start_time.innerText = "";
+        end_time.innerText = "";
+        row_start.classList.add("hidden");
+        row_end.classList.add("hidden");
+      }
+      function logoutGreeting() {
+        localStorage.removeItem("username");
+        location.reload();
+      }
+    </script>
   </body>
 </html>

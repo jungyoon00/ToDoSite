@@ -6,6 +6,8 @@ const weather = document.querySelector("#weather");
 const quoteform = document.querySelector("#quote");
 const todoform = document.querySelector("#todo-form");
 
+const logout = document.querySelector("#logoutBtn");
+
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
@@ -16,6 +18,7 @@ function onLoginSubmit(event) {
     
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
+    logout.classList.remove("hidden");
 }
 
 function paintGreetings(username) {
@@ -33,9 +36,11 @@ if (savedUsername === null) {
     weather.classList.remove(HIDDEN_CLASSNAME);
     quote.classList.remove(HIDDEN_CLASSNAME);
     todoform.classList.remove(HIDDEN_CLASSNAME);
+    logout.classList.add("hidden");
     loginForm.addEventListener("submit", onLoginSubmit);
 
 } else {
+    logout.classList.remove("hidden");
     paintGreetings(savedUsername);
 
 }

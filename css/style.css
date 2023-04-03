@@ -1,18 +1,40 @@
 .hidden {
     display: none;
 }
-.timerBtn {
-  margin-top: 160px;
-  margin-bottom: 5px;
+.timer_button_form {
   text-align: center;
 }
-.button_start {
-  background-color: transparent;
+.show_timer {
+  text-align: center;
+}
+.timer_button {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid white;
-  font-size: 20px;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  font-family: Helvetica;
+  color: white;
+  outline: none;
+  margin-bottom: 10px;
+}
+.show_time {
+  background-color: transparent;
+  color: white;
+  font-family: Helvetica Bold;
+}
+.timer_row {
+  text-align: center;
+}
+.timer_row span:first-child {
+  font-family: Helvetica;
+  color: white;
+  padding-right: 5px;
+}
+.timer_row span:last-child {
+  font-family: Helvetica;
+  color: white;
+  padding-left: 5px;
 }
 .clock_style {
     margin-top: 0px;
@@ -21,6 +43,14 @@
     font-size: 80px;
     text-align: center;
     color: white;
+}
+.stopwatch_style {
+  font-family: Helvetica;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .hello {
     margin-top: 0px;
