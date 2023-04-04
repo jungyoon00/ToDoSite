@@ -22,7 +22,11 @@ function onLoginSubmit(event) {
 }
 
 function paintGreetings(username) {
-    greeting.innerText = `Hello ${username}`;
+    if (username === "이용주" || username === "용주") {
+        greeting.innerText = `Fucking ${username}`;
+    } else {
+        greeting.innerText = `Hello ${username}`;
+    }
     greeting.classList.remove(HIDDEN_CLASSNAME);
     weather.classList.remove(HIDDEN_CLASSNAME);
     quoteform.classList.remove(HIDDEN_CLASSNAME);

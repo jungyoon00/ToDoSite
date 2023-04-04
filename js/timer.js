@@ -5,6 +5,7 @@ const end_time = document.querySelector("#end_time");
 const row_start = document.querySelector("#row_start");
 const row_end = document.querySelector("#row_end");
 
+const stopwatch_form = document.querySelector("#stopwatch_form");
 const stopwatch = document.querySelector("#stopwatch");
 const timer_reset = document.querySelector("#timer_reset");
 
@@ -31,6 +32,8 @@ function startClock() {
 
 function resetClock() {
     stopClock();
+    stopwatch.classList.remove("stopwatch_end");
+    stopwatch.classList.add("stopwatch_style");
     stopwatch.innerText = "00:00:00";
     time = 0;
 }
@@ -52,6 +55,8 @@ function startTimer() {
     const now = `${hours}:${minutes}:${seconds}`;
 
     if (timerForm.value == "active") {
+        stopwatch.classList.remove("stopwatch_start");
+        stopwatch.classList.add("stopwatch_end");
         timerForm.value = "unactive";
         timerForm.innerText = "Start Timer";
         changeEndTime(now);
@@ -60,7 +65,10 @@ function startTimer() {
         stopClock();
         console.log("go unactive");
     } else {
-        stopwatch.classList.remove("hidden")
+        resetClock();
+        stopwatch_form.classList.remove("hidden");
+        stopwatch.classList.remove("stopwatch_style");
+        stopwatch.classList.add("stopwatch_start");
         start_time.innerText = "";
         end_time.innerText = "";
         row_start.classList.add("hidden");

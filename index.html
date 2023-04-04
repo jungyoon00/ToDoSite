@@ -32,7 +32,10 @@
       <span id="end_time" class="show_time" style="padding-left: 3px"></span>
     </div>
     <h2 id="clock" class="clock_style">00:00:00</h2>
-    <h2 id="stopwatch" class="stopwatch_style">00:00:00</h2>
+    <div id="stopwatch_form">
+      <h2 id="stopwatch" class="stopwatch_style">00:00:00</h2>
+      <div class="stopwatch_explain">Don't reload this page to keep this stopwatch.</div>
+    </div>
     <form class="hidden" id="login-form">
       <input
         class="input_name"
@@ -67,7 +70,8 @@
         const timer = document.querySelector("#timer_get")
         const start_time = document.querySelector("#start_time");
         const end_time = document.querySelector("#end_time");
-        const stopwatch_disable = document.querySelector("#stopwatch");
+        const stopwatch_disable = document.querySelector("#stopwatch_form");
+        const stopwatch_color = document.querySelector("#stopwatch");
 
         const row_start = document.querySelector("#row_start");
         const row_end = document.querySelector("#row_end");
@@ -77,6 +81,8 @@
           return
         }
         stopwatch_disable.classList.add("hidden");
+        stopwatch_color.classList.remove("stopwatch_end");
+        stopwatch_color.classList.add("stopwatch_style");
         start_time.innerText = "";
         end_time.innerText = "";
         row_start.classList.add("hidden");

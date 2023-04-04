@@ -52,6 +52,29 @@
   margin-top: 2px;
   margin-bottom: 2px;
 }
+.stopwatch_start {
+  font-family: Helvetica;
+  font-size: 20px;
+  color: rgba(129, 252, 88, 0.933);
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.stopwatch_end {
+  font-family: Helvetica;
+  font-size: 20px;
+  color: rgba(255, 51, 0, 0.938);
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.stopwatch_explain {
+  font-family: Helvetica;
+  font-size: 10px;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+}
 .hello {
     margin-top: 0px;
     padding-top: 0px;
@@ -172,16 +195,6 @@
 .navbar__menu li:hover {
     border-bottom: 2px solid white;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
